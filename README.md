@@ -84,6 +84,29 @@ Each place in `places.json` carries:
   still work in ten years. To use a display font, change `--font-display` at the top of the CSS.
 - Print stylesheet included.
 
+## Publishing (GitHub Pages)
+
+This folder is already a git repository with everything committed. To put it online:
+
+1. Create a **public** repository on GitHub — no README, no .gitignore, leave it empty.
+2. Connect and push:
+
+   ```bash
+   git remote add origin https://github.com/<your-username>/<repo-name>.git
+   git push -u origin main
+   ```
+
+   A browser window will open to sign in to GitHub; that is Git Credential Manager, and it
+   only asks once.
+3. In the repository: **Settings → Pages → Source: Deploy from a branch → `main` / `/ (root)` → Save.**
+4. Wait a minute. The site is at `https://<your-username>.github.io/<repo-name>/`.
+
+`.nojekyll` is already in place so GitHub serves the files as-is instead of running Jekyll over
+them. All 166 image paths were checked to match on disk byte-for-byte and everything is
+lowercase, so nothing breaks on case-sensitive Linux hosting.
+
+To update the live site later: edit, then `git add -A && git commit -m "..." && git push`.
+
 ## Still open
 
 Four real video clips in the originals folder are unplaced — `275E6094…mp4`, `47AB72D9…mp4`,
