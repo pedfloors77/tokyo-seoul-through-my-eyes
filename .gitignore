@@ -1,0 +1,9 @@
+# OS / editor cruft
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+~$*
+
+# nothing else is ignored - assets/photos is the site, it must be committed

@@ -1,0 +1,530 @@
+{
+  "site": {
+    "title": "Tokyo & Seoul Through My Eyes",
+    "subtitle": "A cross-cultural journey of art & design",
+    "author": "Pedro Flores",
+    "email": "floresp@oregonstate.edu",
+    "program": "Creative Capitals: Seoul & Tokyo — Cross-Cultural Journeys in Art & Design",
+    "school": "Oregon State University",
+    "term": "Summer 2026",
+    "dates": "June 17 – June 30, 2026",
+    "poster": "assets/photos/tokyo-seoul/00-program/01-creative-capitals-poster.jpg",
+    "sectionLabels": {
+      "places": "Places",
+      "learnMore": "Learn more",
+      "recommendations": "Recommendations",
+      "gallery": "Photo gallery"
+    }
+  },
+
+  "twoCities": {
+    "title": "Two countries, two capitals",
+    "note": "Numbers I kept coming back to while I was there.",
+    "facts": [
+      "Japan is about 3.8 times larger than South Korea in land area.",
+      "Japan's population is about 123 million; South Korea's is about 51 million.",
+      "Seoul and central Tokyo are close in size and population: Seoul about 9.4 million, central Tokyo about 9.7 million.",
+      "The greater Tokyo area holds roughly 37 million people, one of the largest metropolitan regions in the world."
+    ]
+  },
+
+  "cities": [
+    {
+      "id": "tokyo",
+      "name": "Tokyo",
+      "nameLocal": "東京",
+      "dates": "June 17 – 20, 2026",
+      "intro": "Four days that started with pachinko signs outside a hotel window and ended at Shibuya Crossing.",
+      "places": [
+        {
+          "id": "shinjuku",
+          "name": "Shinjuku",
+          "nameLocal": "新宿",
+          "subtitle": "Where the trip started every morning",
+          "date": "2026-06-17",
+          "dateRange": "June 17 – 20",
+          "coords": [35.6944, 139.7002],
+          "confidence": "confirmed",
+          "myWords": "This was our base. The view out the window was a wall of pachinko signage in daylight and a different city entirely at night.",
+          "facts": [
+            "Shinjuku Station is the busiest railway station in the world by passenger numbers, handling well over three million people a day across its many lines.",
+            "The 3D calico cat on Cross Shinjuku Vision, above the station's east exit, is an anamorphic LED billboard — the illusion only resolves from the street below.",
+            "Don Quijote (\"Donki\") stores stack goods floor to ceiling in a style called atsuryoku chinretsu, \"compression display,\" and many branches never close."
+          ],
+          "learnMore": [
+            { "label": "Go Tokyo — Shinjuku area guide", "url": "https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html" }
+          ],
+          "recommendation": "Go up to a high floor at night and look at it, then go down and walk it. They are two different places."
+        },
+        {
+          "id": "21-21-design-sight",
+          "name": "21_21 DESIGN SIGHT",
+          "subtitle": "One of Japan's leading design museums",
+          "neighborhood": "Tokyo Midtown, Roppongi",
+          "date": "2026-06-17",
+          "coords": [35.6658, 139.7280],
+          "confidence": "confirmed",
+          "myWords": "One of Japan's leading design museums. An entire gallery made of hanging thread, all of it coming out of a single bowl of raw fiber on the floor.",
+          "facts": [
+            "The building was designed by Tadao Ando, with the folded steel-plate roof inspired by Issey Miyake's \"A Piece of Cloth\" concept — one sheet, one form.",
+            "Most of the building sits underground; only the two folded roof planes rise above Tokyo Midtown's garden.",
+            "It calls itself a \"design sight\" rather than a museum: it commissions new work around a theme instead of showing a permanent collection."
+          ],
+          "learnMore": [
+            { "label": "21_21 DESIGN SIGHT — official site", "url": "https://www.2121designsight.jp/en/" }
+          ],
+          "recommendation": "Read the theme statement before you walk in. Every object in the room is an answer to the same question."
+        },
+        {
+          "id": "mori-art-museum",
+          "name": "Mori Art Museum — Ron Mueck",
+          "neighborhood": "Roppongi Hills",
+          "subtitle": "Hyperreal sculpture, at the wrong size on purpose",
+          "date": "2026-06-17",
+          "coords": [35.6605, 139.7292],
+          "confidence": "confirmed",
+          "myWords": "Ron Mueck's figures are either far too big or far too small, and that is exactly what makes you look at them properly.",
+          "facts": [
+            "The Mori Art Museum sits on the 53rd floor of Roppongi Hills Mori Tower and stays open until 10pm most nights — unusually late for a museum.",
+            "Ron Mueck is an Australian-born, London-based sculptor who worked in film and TV puppetry before turning to fine art.",
+            "His figures are silicone and fiberglass, with hair inserted a few strands at a time — the realism is what makes the change in scale land."
+          ],
+          "learnMore": [
+            { "label": "Mori Art Museum — official site", "url": "https://www.mori.art.museum/en/" }
+          ],
+          "recommendation": "Buy the combined ticket with the Tokyo City View observation deck and do the art first, the view second."
+        },
+        {
+          "id": "teamlab-planets",
+          "name": "teamLab Planets TOKYO",
+          "neighborhood": "Toyosu, Kōtō",
+          "subtitle": "An immersive digital museum that used every sense at once",
+          "date": "2026-06-17",
+          "coords": [35.6491, 139.7899],
+          "confidence": "confirmed",
+          "myWords": "This immersive digital museum was a unique experience that combined all human senses into the design environment.",
+          "facts": [
+            "You take your shoes off at the door and walk through the whole museum barefoot — several rooms are ankle-deep in water.",
+            "In the Floating Flower Garden, thousands of living orchids hang from the ceiling and rise as you approach, so the space opens around your body.",
+            "The giant spheres respond to touch: pushing one changes its color and sends the change to the others, so the room is edited by whoever is in it.",
+            "teamLab describes the work as \"body immersive\" — no frame, no edge, and no fixed spot to view it from."
+          ],
+          "learnMore": [
+            { "label": "teamLab Planets TOKYO — official site", "url": "https://www.teamlab.art/e/planets/" }
+          ],
+          "recommendation": "Wear shorts or something you can roll above the knee. Reserve a time slot days in advance."
+        },
+        {
+          "id": "tokyo-national-museum",
+          "name": "Tokyo National Museum",
+          "nameLocal": "東京国立博物館",
+          "neighborhood": "Ueno Park",
+          "subtitle": "Japan's oldest and largest museum",
+          "date": "2026-06-18",
+          "coords": [35.7188, 139.7757],
+          "confidence": "confirmed",
+          "myWords": "Japan's oldest and largest museum, featuring Japanese art, crafts, historical artifacts, and design traditions.",
+          "facts": [
+            "Founded in 1872, it holds well over 100,000 objects, including more than 80 designated National Treasures.",
+            "The Honkan (main gallery) was built in 1938 in the Imperial Crown style — a Western building topped with a Japanese roof.",
+            "Its samurai armor is lacquered iron and leather laced with silk cord: armor built to be read as a signal on a battlefield as much as to stop a blade."
+          ],
+          "learnMore": [
+            { "label": "Tokyo National Museum — official site", "url": "https://www.tnm.jp/?lang=en" }
+          ],
+          "recommendation": "Start in the Honkan and go upstairs first. If you only have an hour, spend it on armor, swords and lacquer.",
+          "aside": {
+            "title": "Also in Ueno: Seiyoken, a landmark of Japan's modernization",
+            "nameLocal": "精養軒",
+            "myWords": "Seiyoken is one of Japan's oldest Western-style restaurants. Established during the early Meiji era, it introduced Western dining culture at a time when Japan was rapidly modernizing and engaging with international influences.",
+            "facts": [
+              "The Meiji era (1868–1912) is when Japan opened to the West after more than two centuries of restricted contact — Western food was part of that policy, not just a fashion.",
+              "The Ueno branch sits inside Ueno Park, a short walk from the Tokyo National Museum."
+            ],
+            "learnMore": []
+          }
+        },
+        {
+          "id": "sensoji-asakusa",
+          "name": "Sensō-ji & Asakusa",
+          "nameLocal": "浅草寺",
+          "subtitle": "Tokyo's oldest temple",
+          "date": "2026-06-18",
+          "coords": [35.7148, 139.7967],
+          "confidence": "confirmed",
+          "myWords": "You come in under a lantern the size of a car, walk a street of stalls, and end up in front of a gold altar with a few hundred people bowing around you.",
+          "facts": [
+            "Sensō-ji was founded in 645 CE, making it the oldest temple in Tokyo.",
+            "The great red lantern at Kaminarimon weighs roughly 700 kg and is replaced about every ten years; it folds up when a portable shrine needs to pass through.",
+            "Nakamise-dōri, the shopping street between the two gates, has been selling to pilgrims for around three centuries.",
+            "Almost everything here is a post-war rebuild — the temple was destroyed in the 1945 firebombing of Tokyo and reconstructed as a symbol of the city's recovery."
+          ],
+          "learnMore": [
+            { "label": "Sensō-ji — official site", "url": "https://www.senso-ji.jp/english/" }
+          ],
+          "recommendation": "Get there early. By noon Nakamise-dōri is shoulder to shoulder."
+        },
+        {
+          "id": "okonomiyaki",
+          "name": "Okonomiyaki",
+          "nameLocal": "お好み焼き",
+          "subtitle": "Grill what you like",
+          "date": "2026-06-18",
+          "coords": [35.7118, 139.7956],
+          "confidence": "confirmed",
+          "myWords": "A popular Japanese savory pancake made with cabbage, flour, eggs, and ingredients such as pork, seafood, or vegetables. The name means \"grill what you like.\" Cooked on a large iron griddle and topped with a sweet-savory sauce, Japanese mayonnaise, seaweed, and bonito flakes. It's especially famous in Osaka and Hiroshima.",
+          "facts": [
+            "Okonomi means \"what you like\" and yaki means \"grilled\" — the dish is named after the choice, not the ingredients.",
+            "Osaka style mixes everything into the batter; Hiroshima style layers it and adds noodles.",
+            "The bonito flakes on top move in the heat, which is why the whole thing looks like it is breathing when it arrives."
+          ],
+          "learnMore": [],
+          "recommendation": "Sit at the griddle counter, not a table. Let the cook do it the first time and copy them the second."
+        },
+        {
+          "id": "shibuya",
+          "name": "Shibuya",
+          "nameLocal": "渋谷",
+          "subtitle": "The crossing, and the Pokémon Center above it",
+          "date": "2026-06-19",
+          "coords": [35.6595, 139.7005],
+          "confidence": "confirmed",
+          "myWords": "Shibuya Crossing at night is the one thing that looked exactly like the photos and still felt like more.",
+          "facts": [
+            "Shibuya Crossing is a \"scramble\" intersection: all vehicle traffic stops and pedestrians cross in every direction at once, including diagonally.",
+            "At peak times an estimated 2,000–3,000 people cross in a single light cycle.",
+            "Pokémon Center Shibuya is inside Shibuya PARCO, on the same floor as Nintendo Tokyo and the Capcom Store."
+          ],
+          "learnMore": [
+            { "label": "Go Tokyo — Shibuya area guide", "url": "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html" }
+          ],
+          "recommendation": "Cross it once at street level for the noise, then watch a cycle from above."
+        }
+      ]
+    },
+
+    {
+      "id": "seoul",
+      "name": "Seoul",
+      "nameLocal": "서울",
+      "dates": "June 21 – 30, 2026",
+      "intro": "Ten days of palaces, museums, studios, soup, and a prison that changed how I read the rest of it.",
+      "places": [
+        {
+          "id": "myeongdong",
+          "name": "Myeongdong",
+          "nameLocal": "명동",
+          "subtitle": "First morning in Seoul",
+          "date": "2026-06-21",
+          "coords": [37.5638, 126.9870],
+          "confidence": "confirmed",
+          "myWords": "A Gothic brick cathedral at the end of a shopping street, with N Seoul Tower sitting on the hill right behind it.",
+          "facts": [
+            "Myeongdong Cathedral, completed in 1898, was Korea's first parish church built in the Gothic Revival style and is the seat of the Archdiocese of Seoul.",
+            "During the 1970s and 80s it became a refuge for pro-democracy protesters, and is still strongly associated with that movement.",
+            "Myeongdong is one of the densest retail districts in the world by rent per square meter."
+          ],
+          "learnMore": [
+            { "label": "Visit Seoul — Myeongdong", "url": "https://english.visitseoul.net/" }
+          ],
+          "recommendation": "Do the cathedral in the morning and the street food carts after dark. They are two separate experiences on one block."
+        },
+        {
+          "id": "gyeongbokgung",
+          "name": "Gyeongbokgung Palace",
+          "nameLocal": "경복궁",
+          "subtitle": "Korea's largest and most iconic royal palace",
+          "date": "2026-06-22",
+          "coords": [37.5796, 126.9770],
+          "confidence": "confirmed",
+          "myWords": "We wore hanbok, the traditional Korean clothing, to walk it. The palace was the central palace until it was heavily damaged by fire during the Japanese invasion of 1592. The structure was almost abandoned and left in ruin until the prince regent Heungseon Daewongun decided to rebuild it at the end of the 19th century as a symbolic expression of the dynasty's power.\n\nThe Korean art of palaces, gardens and fortresses displays Korean aesthetics at their best. The official monumental architecture of the past, complemented by its landscape design, embodied the ideology of the regime: a three-dimensional textbook of the ideal relations between humans and society, humans and nature, and humans and power. It also offers traces of Korea's unstable past.",
+          "facts": [
+            "Gyeongbokgung was founded in 1395, three years after the Joseon dynasty began, and its name means roughly \"palace greatly blessed by heaven.\"",
+            "Wearing hanbok gets you in free — which is why so many of the people in the courtyard are in it.",
+            "The palace sits at the foot of Bugaksan by design: pungsu-jiri (Korean geomancy) placed the mountain at its back and water in front.",
+            "Gyeonghoeru, the pavilion on the pond, was where the king held state banquets; it stands on 48 stone pillars.",
+            "Restoration has been running since 1990 and is still going — the Japanese colonial government had demolished most of the compound."
+          ],
+          "learnMore": [
+            { "label": "Gyeongbokgung — Korea Heritage Service", "url": "https://english.visitkorea.or.kr/" }
+          ],
+          "recommendation": "Rent hanbok near Anguk Station before you go in, and time your visit around the changing of the guard."
+        },
+        {
+          "id": "seoul-education-museum",
+          "name": "Seoul Education Museum",
+          "nameLocal": "서울교육박물관",
+          "neighborhood": "Bukchon",
+          "subtitle": "Hanok, and four hundred years of Korean school",
+          "date": "2026-06-22",
+          "coords": [37.5817, 126.9829],
+          "confidence": "confirmed",
+          "myWords": "Hanok is traditional-style Korean housing. Seeing a whole village modeled roof by roof, and a schoolroom rebuilt down to the coal stove, made the neighborhood outside make sense.",
+          "facts": [
+            "The museum sits inside Jeongdok Library in Bukchon, on the grounds of what was once Gyeonggi High School — so the building is itself part of the history it displays.",
+            "A hanok is oriented by pungsu-jiri and built without nails, with ondol underfloor heating on one side and a raised wooden maru floor for summer on the other.",
+            "Bukchon Hanok Village sits between Gyeongbokgung and Changdeokgung — it was where court officials and aristocracy lived.",
+            "A seodang was a village school where boys learned classical Chinese; a seowon was a private Confucian academy, and nine Korean seowon are UNESCO World Heritage sites.",
+            "The coal briquette stove in the recreated classroom is a yeontan stove — the same fuel that heated most Korean homes into the 1980s."
+          ],
+          "learnMore": [
+            { "label": "Visit Seoul — Bukchon Hanok Village", "url": "https://english.visitseoul.net/" }
+          ],
+          "recommendation": "People live in Bukchon. There are signs asking for quiet, and they mean it."
+        },
+        {
+          "id": "mmca-seoul",
+          "name": "National Museum of Modern and Contemporary Art",
+          "nameLocal": "국립현대미술관",
+          "subtitle": "Damien Hirst — life, death, and beauty",
+          "date": "2026-06-22",
+          "coords": [37.5785, 126.9800],
+          "confidence": "confirmed",
+          "myWords": "This philosophical experience resonated with me personally. Damien Hirst explored the complex human experiences surrounding life, death, and beauty.",
+          "facts": [
+            "MMCA Seoul opened in 2013 on the former site of the Defense Security Command, next to Gyeongbokgung, and is built low and around courtyards so it doesn't overpower the palace.",
+            "Hirst's kaleidoscope paintings are laid out as Gothic rose and lancet windows — the church form is the argument, not the decoration.",
+            "His work returns to the same problem over and over: that we know we will die and organize almost everything around not thinking about it."
+          ],
+          "learnMore": [
+            { "label": "MMCA — official site", "url": "https://www.mmca.go.kr/eng/" }
+          ],
+          "recommendation": "Sit with one piece longer than feels comfortable. That is where this one works."
+        },
+        {
+          "id": "korean-table",
+          "name": "The Korean table",
+          "subtitle": "Kimchi, soup, rice, and the things you drink after",
+          "date": "2026-06-22",
+          "dateRange": "throughout",
+          "coords": null,
+          "confidence": "confirmed",
+          "myWords": "A basic Korean meal is a bowl of rice or noodles, a soup, and simple side dishes.\n\nMy favorite: kimchi. Food or medicine?\n\nKimchi is the king of the banchan, the side dishes, and one of the three essential elements of the basic Korean meal along with rice and soup. It is the most common side dish, and in very simple meals it may be the only one. Kimchi is a true emblem of Korean national heritage, with an entire museum devoted to it in Seoul. It is a cold, fermented, usually vegetable-based dish. The ingredients change depending on where it is made, but the crucial part is that it is preserved for a long time. It is traditionally fermented and stored in dok, the earthen jars made especially for that purpose.\n\nFermentation provides the lactic acid that is otherwise absent from Korean cuisine, which does not traditionally include dairy; the chili pepper delivers ten times more vitamin C than an orange; the fiber promotes regularity; and the spices stimulate metabolism. Combined, the ingredients are believed to protect against certain cancers and drain the arteries, as well as helping manage hypertension and diabetes.",
+          "dishes": [
+            { "name": "Samgyetang", "nameLocal": "삼계탕", "note": "A traditional Korean ginseng chicken soup made with a whole young chicken stuffed with rice, garlic, jujubes, and ginseng. Especially popular in summer as an energy-restoring dish." },
+            { "name": "Doganitang", "nameLocal": "도가니탕", "note": "A rich, milky soup made by slowly simmering beef knee cartilage and bones for many hours." },
+            { "name": "Haejangguk", "nameLocal": "해장국", "note": "Literally \"hangover soup\" — a traditional soup originally eaten to recover after drinking." },
+            { "name": "Soju", "nameLocal": "소주", "note": "Millions of bottles are sold every year because it is both strong and cheap. It has become the national drink, consumed to celebrate success, enhance joy, and alleviate pain." },
+            { "name": "Cheonggiwa Korean BBQ", "nameLocal": "청기와", "note": "Korean barbecue, grilled at the table." }
+          ],
+          "facts": [
+            "Kimjang, the communal late-autumn making of kimchi, is on UNESCO's list of Intangible Cultural Heritage.",
+            "Eating samgyetang on the three hottest days of summer — boknal — follows the principle of iyeolchiyeol, \"fight heat with heat.\"",
+            "Banchan are shared and refilled for free; they arrive before the meal and are not an appetizer course."
+          ],
+          "learnMore": [
+            { "label": "Museum Kimchikan, Seoul", "url": "https://www.kimchikan.com/" }
+          ],
+          "recommendation": "Drink the broth straight from the bowl. Everyone does it and it is not rude."
+        },
+        {
+          "id": "cheonggyecheon",
+          "name": "Cheonggyecheon Stream",
+          "nameLocal": "청계천",
+          "subtitle": "A highway, removed",
+          "date": "2026-06-22",
+          "coords": [37.5691, 126.9799],
+          "confidence": "confirmed",
+          "myWords": "A stream running below street level through the middle of downtown, with people sitting along it with their shoes off.",
+          "facts": [
+            "The stream was covered over in the 1950s and 60s and an elevated highway was built on top of it.",
+            "Both were torn out and the stream restored in a 2003–2005 project — one of the most cited examples of freeway removal in the world.",
+            "It runs about 11 km through central Seoul and measurably lowers the air temperature along its corridor."
+          ],
+          "learnMore": [
+            { "label": "Visit Seoul — Cheonggyecheon", "url": "https://english.visitseoul.net/" }
+          ],
+          "recommendation": "Walk it at dusk when the office towers light up above you and the water is still cool."
+        },
+        {
+          "id": "jogyesa-balwoo-gongyang",
+          "name": "Jogyesa & Balwoo Gongyang",
+          "nameLocal": "조계사 · 발우공양",
+          "subtitle": "Michelin-recognized Korean Buddhist temple cuisine",
+          "date": "2026-06-23",
+          "coords": [37.5745, 126.9820],
+          "confidence": "confirmed",
+          "myWords": "Balwoo Gongyang is a Michelin-recognized restaurant specializing in traditional Korean Buddhist temple cuisine.",
+          "facts": [
+            "\"Balwoo gongyang\" is the name of the formal monastic meal itself: you eat from a nested set of bowls and finish everything, leaving nothing behind.",
+            "Temple cuisine uses no meat and none of the five pungent vegetables — garlic, green onion, chives, leek and asafoetida — which are held to disturb the mind.",
+            "Jogyesa is the head temple of the Jogye Order, the largest Buddhist order in Korea, and sits in the middle of downtown Seoul."
+          ],
+          "learnMore": [
+            { "label": "Jogyesa Temple", "url": "https://www.jogyesa.kr/" },
+            { "label": "Korean Temple Food (Jogye Order)", "url": "https://www.koreatemplefood.com/" }
+          ],
+          "recommendation": "Book ahead. The set menu is long and paced slowly on purpose — don't schedule anything tight after it."
+        },
+        {
+          "id": "seodaemun-prison",
+          "name": "Seodaemun Prison History Hall",
+          "nameLocal": "서대문형무소역사관",
+          "subtitle": "Korea's independence movement and modern history",
+          "date": "2026-06-24",
+          "coords": [37.5745, 126.9566],
+          "confidence": "confirmed",
+          "myWords": "This experience educated me and opened my eyes to Korea's independence movement and modern history. Built during the Japanese colonial period, this site offers important insight into both.\n\nIt was built in the late era of the Daehan Empire because of pressure by the Japanese. Before this it was known as Gyeongseong Prison. It was built with the aim of suppressing the Korean patriots who were fighting to regain national sovereignty. It is a historical building that was operated as a prison for eight decades, from 1908 through to 1987, where many independence activists were imprisoned during the Japanese occupation, as well as many democratization activists during the despotic regime after liberation — imprisoned, tortured, and died.",
+          "facts": [
+            "The prison opened in 1908 and did not close until 1987 — it outlived the colonial government by more than forty years and kept doing similar work.",
+            "Yu Gwan-sun, the student who became the face of the March 1st Movement of 1919, died here in 1920 at the age of seventeen.",
+            "The underground tunnel in these photos is the sigumun, the corpse-removal passage, built so bodies could leave without being seen from the street.",
+            "The site opened to the public as a history hall in 1998; the brick pillars in the field mark where the original walls stood."
+          ],
+          "learnMore": [
+            { "label": "Seodaemun Prison History Hall — official site", "url": "https://sphh.sscmc.or.kr/" }
+          ],
+          "recommendation": "Take the guided tour rather than walking it alone, and give it more time than you think you need."
+        },
+        {
+          "id": "n-seoul-tower",
+          "name": "N Seoul Tower",
+          "nameLocal": "N서울타워",
+          "subtitle": "The whole city, and the mountains behind it",
+          "date": "2026-06-24",
+          "coords": [37.5512, 126.9882],
+          "confidence": "confirmed",
+          "myWords": "From up here you finally see the shape of it: mountains on every side, the Han River cutting straight through, and Lotte World Tower way off in the haze.",
+          "facts": [
+            "The tower opened in 1971 as a broadcast transmitter and to the public in 1980; it stands on Namsan, so its tip is roughly 480 m above sea level.",
+            "Seoul is ringed by mountains — Bugaksan, Inwangsan, Namsan, Naksan — which is why the skyline keeps getting interrupted.",
+            "Lotte World Tower, visible on the far side of the river, is 555 m and the tallest building in Korea."
+          ],
+          "learnMore": [
+            { "label": "N Seoul Tower — official site", "url": "https://www.seoultower.co.kr/en/" }
+          ],
+          "recommendation": "Walk up through Namsan Park instead of taking the cable car if the weather is good."
+        },
+        {
+          "id": "national-museum-of-korea",
+          "name": "National Museum of Korea",
+          "nameLocal": "국립중앙박물관",
+          "subtitle": "Korean history, art and culture from ancient times to the present",
+          "date": "2026-06-25",
+          "coords": [37.5238, 126.9805],
+          "confidence": "confirmed",
+          "myWords": "The largest museum in Korea. It offers an overview of Korean history, art, and culture from ancient times to the present.",
+          "facts": [
+            "It is one of the largest museums in the world by floor area, with a collection of over 400,000 objects.",
+            "The Room of Quiet Contemplation holds two gilt-bronze Pensive Bodhisattvas — National Treasures 78 and 83 — in a dim, sloping room built for those two objects alone.",
+            "The ancient Greek bronze helmet in the collection was excavated at Olympia and given to the marathon runner Sohn Kee-chung, who won gold at the 1936 Berlin Olympics while forced to compete under a Japanese name. He donated it to the museum.",
+            "Admission to the permanent galleries is free."
+          ],
+          "learnMore": [
+            { "label": "National Museum of Korea — official site", "url": "https://www.museum.go.kr/ENG/main/index.do" }
+          ],
+          "recommendation": "Go to the Room of Quiet Contemplation first, before the building tires you out.",
+          "aside": {
+            "title": "Also in Yongsan: the War Memorial of Korea",
+            "nameLocal": "전쟁기념관",
+            "myWords": "The War Memorial of Korea explores Korea's military history and the impact of the Korean War.",
+            "facts": [
+              "The Korean War (1950–1953) ended in an armistice, not a peace treaty — the two Koreas are still technically at war.",
+              "The memorial stands on the former headquarters site of the Korean army infantry, a short walk from the National Museum.",
+              "Its Hall of Remembrance lists the names of the dead, including allied soldiers from twenty-one contributing nations."
+            ],
+            "learnMore": [
+              { "label": "War Memorial of Korea — official site", "url": "https://www.warmemo.or.kr/front/eng/main.do" }
+            ]
+          }
+        },
+        {
+          "id": "world-cup-downtown",
+          "name": "The 2026 World Cup, downtown",
+          "subtitle": "A few thousand people sitting in a closed street",
+          "date": "2026-06-25",
+          "coords": null,
+          "confidence": "confirmed",
+          "myWords": "Downtown Seoul, watching the 2026 World Cup on giant screens hung off the side of a building. They closed the street and everyone just sat down in it. This was the most Korean thing I saw that had nothing to do with a museum.",
+          "facts": [
+            "Korea's mass street-viewing tradition started at the 2002 World Cup, co-hosted by Korea and Japan, when millions filled City Hall Plaza and Gwanghwamun to watch the national team reach the semi-finals.",
+            "The crowds are organized by the Red Devils, the official supporters' club, and \"Dae~han-min-guk\" — the country's own name, clapped out in five beats — is the chant you hear.",
+            "The 2026 World Cup was the first with 48 teams, co-hosted by the United States, Canada and Mexico."
+          ],
+          "learnMore": [
+            { "label": "FIFA World Cup 2026", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026" }
+          ],
+          "recommendation": "If a match falls while you are there, do not watch it in a bar. Find the street."
+        },
+        {
+          "id": "seoul-national-university",
+          "name": "Seoul National University",
+          "nameLocal": "서울대학교",
+          "subtitle": "Campus tour and gallery visit",
+          "date": "2026-06-26",
+          "coords": [37.4601, 126.9500],
+          "confidence": "confirmed",
+          "myWords": "A campus tour, a gallery visit, and time to explore selected art and design categories.",
+          "facts": [
+            "SNU is the leading national university in South Korea and part of the \"SKY\" group with Korea University and Yonsei University.",
+            "The main Gwanak campus sits against Gwanaksan mountain in the south of the city and is large enough to run its own bus network.",
+            "The SNU Museum of Art was designed by Rem Koolhaas / OMA — a concrete volume cantilevered out over the slope."
+          ],
+          "learnMore": [
+            { "label": "Seoul National University", "url": "https://en.snu.ac.kr/" }
+          ],
+          "recommendation": "Ask to see student work in progress, not just the finished show. That's where the actual conversation is."
+        },
+        {
+          "id": "han-river-cruise",
+          "name": "Han River — Starlight Aurora Cruise",
+          "nameLocal": "한강",
+          "subtitle": "The city from the water",
+          "date": "2026-06-26",
+          "coords": [37.5212, 126.9470],
+          "confidence": "confirmed",
+          "myWords": "We took the Starlight Aurora Cruise on the Han River — up on the deck for the sunset, and still out there when Yeouido lit up.",
+          "facts": [
+            "The Han is about 1 km wide through central Seoul, which is why the city reads as two halves — Gangbuk north of it, Gangnam south.",
+            "Its parks and expressways were built through the \"Miracle on the Han River,\" the period of rapid industrial growth from the 1960s to the 1990s that the river is now named for.",
+            "Banpo Bridge's Moonlight Rainbow Fountain runs jets of lit water off both sides of the deck in the evening — the longest bridge fountain in the world."
+          ],
+          "learnMore": [
+            { "label": "Visit Seoul — Han River", "url": "https://english.visitseoul.net/" }
+          ],
+          "recommendation": "Take the sunset departure and stay outside on the deck the whole time."
+        },
+        {
+          "id": "design-house",
+          "name": "Design House",
+          "nameLocal": "디자인하우스",
+          "subtitle": "One of Korea's leading design and lifestyle media companies",
+          "date": "2026-06-29",
+          "coords": [37.5592, 127.0039],
+          "confidence": "confirmed",
+          "myWords": "Design House is one of Korea's leading design and lifestyle media companies. Founded in 1976, it publishes influential magazines such as Monthly Design and Happy Plus. The company has played a significant role in shaping contemporary Korean design culture through publishing, exhibitions, design events, and educational initiatives.\n\nThey put a slide up that said \"Design — June 29th, Oregon State University,\" and then a wheel called The Power of Connection with every discipline on it: art, graphic, brand, digital and AI, living, landscape, public, exhibition, space, business, service, product, craft, CMF.",
+          "facts": [
+            "Monthly Design (월간디자인), launched in 1976, is the longest-running design magazine in Korea.",
+            "Design House also runs Seoul Living Design Fair and the Design Korea-adjacent events that set much of the country's design calendar.",
+            "Design Gallery MOISO, in the same building, shows work from the magazines' orbit alongside independent designers."
+          ],
+          "learnMore": [
+            { "label": "Design House", "url": "https://www.designhouse.co.kr/" }
+          ],
+          "recommendation": "Ask how a print magazine survived the last twenty years here. The answer is the whole business model."
+        },
+        {
+          "id": "nanta",
+          "name": "NANTA",
+          "nameLocal": "난타",
+          "subtitle": "The culmination of the trip",
+          "date": "2026-06-29",
+          "neighborhood": "Myeongdong",
+          "coords": [37.5638, 126.9855],
+          "confidence": "confirmed",
+          "photoNote": "The one image in this section is a promotional photograph of the NANTA theatre in Myeongdong, not my own — I did not photograph the performance. It carries the venue's own MYEONGDONG NANTA caption burned into it, and it is a smaller, softer file than the rest of the site. Credit it to the theatre if this page goes public.",
+          "myWords": "It was an immersive experience that can be enjoyed by audiences from around the world regardless of language. It blended traditional Korean rhythms with comedy, drama, and acrobatics, and it felt like a culmination of our trip. The show is set in a busy kitchen, where chefs race against time to prepare a wedding banquet while creating energetic percussion performances using everyday kitchen tools such as knives, cutting boards, pots, and pans.",
+          "facts": [
+            "NANTA premiered in 1997 and became the first Korean show to run off-Broadway; it is the longest-running show in Korean history.",
+            "The rhythms come from samulnori, a percussion form built on four traditional Korean instruments.",
+            "It is almost entirely non-verbal, which is exactly why it exports."
+          ],
+          "learnMore": [
+            { "label": "NANTA — official site", "url": "https://www.nanta.co.kr/" }
+          ],
+          "recommendation": "Sit near the front if you don't mind being pulled on stage."
+        }
+      ]
+    }
+  ]
+}

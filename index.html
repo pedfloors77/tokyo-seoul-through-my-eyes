@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tokyo &amp; Seoul Through My Eyes</title>
+<meta name="description" content="A cross-cultural journey of art and design through Tokyo and Seoul. Oregon State University, Summer 2026.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+<header class="topbar" id="topbar">
+  <a class="topbar__home" href="#top">
+    <span class="topbar__mark" aria-hidden="true">東 · 서</span>
+    <span class="topbar__title">Tokyo &amp; Seoul <em>Through My Eyes</em></span>
+  </a>
+  <nav class="topbar__nav" aria-label="Sections">
+    <a href="#tokyo">Tokyo</a>
+    <a href="#seoul">Seoul</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero__stage" id="hero-stage" aria-hidden="true"></div>
+  <div class="hero__veil" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <p class="hero__kicker">Creative Capitals &mdash; Cross-Cultural Journeys in Art &amp; Design</p>
+    <h1 class="hero__title">Tokyo <span class="amp">&amp;</span> Seoul<br><em>Through My Eyes</em></h1>
+    <p class="hero__lede">Fourteen days, two capitals, eighty-three photographs. What I saw, heard,
+      learned and ate on a faculty-led journey through Japan and Korea.</p>
+    <dl class="hero__meta">
+      <div><dt>Program</dt><dd id="meta-program">&mdash;</dd></div>
+      <div><dt>School</dt><dd id="meta-school">&mdash;</dd></div>
+      <div><dt>Dates</dt><dd id="meta-dates">&mdash;</dd></div>
+    </dl>
+    <a class="hero__cue" href="#two-cities"><span>Begin</span><i aria-hidden="true"></i></a>
+  </div>
+  <figure class="hero__poster">
+    <img id="hero-poster-img" alt="" loading="eager" decoding="async">
+    <figcaption>The program poster</figcaption>
+  </figure>
+</section>
+
+<main id="main">
+
+  <section class="stats" id="two-cities">
+    <div class="wrap">
+      <h2 class="stats__title" id="stats-title">Two countries, two capitals</h2>
+      <p class="stats__note" id="stats-note"></p>
+      <ul class="stats__list" id="stats-list"></ul>
+    </div>
+  </section>
+
+  <div id="cities"></div>
+
+  <section class="travel" id="travel">
+    <div class="wrap">
+      <h2 class="section-heading"><span class="section-heading__num">03</span> Getting there, and back</h2>
+      <div class="travel__grid" id="travel-grid"></div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <h2 class="section-heading"><span class="section-heading__num">04</span> Photo gallery</h2>
+      <p class="gallery__intro">Every photograph on this site, <span id="gallery-count"></span> in all.
+        Filter by city or by place.</p>
+      <div class="chips" id="gallery-filters" role="group" aria-label="Filter photographs"></div>
+      <div class="gallery__grid" id="gallery-grid"></div>
+      <p class="gallery__empty" id="gallery-empty" hidden>No photographs in that filter.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div>
+      <p class="foot__title">Tokyo &amp; Seoul Through My Eyes</p>
+      <p class="foot__by">Photographs and writing by <span id="foot-author">&mdash;</span></p>
+      <p class="foot__contact"><a id="foot-email" href="#">&mdash;</a></p>
+      <p id="foot-meta"></p>
+    </div>
+    <p class="foot__note">All photographs are my own, with one exception: the NANTA section uses a
+      promotional photograph of the theatre in Myeongdong. Historical and background notes under
+      &ldquo;Learn more&rdquo; are researched context, not my own writing.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photograph" hidden>
+  <button class="lightbox__close" id="lb-close" aria-label="Close">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lb-prev" aria-label="Previous photograph">&#8249;</button>
+  <button class="lightbox__nav lightbox__nav--next" id="lb-next" aria-label="Next photograph">&#8250;</button>
+  <figure class="lightbox__figure">
+    <img id="lb-img" alt="">
+    <figcaption>
+      <p class="lightbox__caption" id="lb-caption"></p>
+      <p class="lightbox__meta" id="lb-meta"></p>
+    </figcaption>
+  </figure>
+</div>
+
+<script src="data/site-data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
