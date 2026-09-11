@@ -5,24 +5,34 @@
    ========================================================================== */
 
 :root {
-  --bg:        #0c0b0f;
-  --bg-2:      #131218;
-  --surface:   #1a1922;
-  --surface-2: #22212c;
-  --line:      #2f2d3a;
-  --line-soft: #232230;
+  /* The palette: exactly five colors, from the flags of Japan and Korea.
+     Every color below is one of these five, sometimes at partial opacity.
+     Do not add a sixth. */
+  --black:   #000000;
+  --white:   #FFFFFF;
+  --jp-red:  #BC002D;  /* hinomaru */
+  --kr-red:  #CD2E3A;  /* taegeuk, upper half */
+  --kr-blue: #0F64CD;  /* taegeuk, lower half */
 
-  --ink:       #f3efe9;
-  --ink-2:     #cfc9c1;
-  --muted:     #948d86;
-  --faint:     #6b655f;
+  --bg:        var(--black);
+  --bg-2:      rgba(255, 255, 255, .04);
+  --surface:   rgba(255, 255, 255, .06);
+  --line:      rgba(255, 255, 255, .22);
+  --line-soft: rgba(255, 255, 255, .12);
 
-  --tokyo:      #ff6f5e;
-  --tokyo-deep: #c93a2c;
-  --seoul:      #5fcaa4;
-  --seoul-deep: #2c8a68;
-  --accent:     var(--tokyo);
-  --accent-deep:var(--tokyo-deep);
+  --ink:       var(--white);
+  --ink-2:     rgba(255, 255, 255, .82);
+  --muted:     rgba(255, 255, 255, .64);
+  --faint:     rgba(255, 255, 255, .5);
+
+  /* Tokyo is one red; Seoul is blue and red. The three flag colors measure
+     3.2-4.1:1 on black - enough for large type, rules, fills and shapes
+     (3:1), not for small text (4.5:1). So small labels stay white. */
+  --tokyo:    var(--jp-red);
+  --seoul:    var(--kr-blue);
+  --seoul-2:  var(--kr-red);
+  --accent:   var(--tokyo);
+  --accent-2: var(--tokyo);
 
   --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", serif;
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -76,20 +86,22 @@ a { color: inherit; }
   position: fixed; inset: 0 0 auto 0; z-index: 80;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
   padding: .7rem clamp(1rem, 3vw, 2rem);
-  background: rgba(12, 11, 15, 0);
+  background: transparent;
   border-bottom: 1px solid transparent;
   transition: background .35s ease, border-color .35s ease, backdrop-filter .35s ease;
 }
 .topbar.is-stuck {
-  background: rgba(12, 11, 15, .86);
-  backdrop-filter: blur(14px) saturate(1.2);
+  background: rgba(0, 0, 0, .86);
+  backdrop-filter: blur(14px);
   border-bottom-color: var(--line-soft);
 }
 .topbar__home { display: flex; align-items: baseline; gap: .7rem; text-decoration: none; min-width: 0; }
 .topbar__mark {
   font-family: var(--font-display); font-size: .95rem; letter-spacing: .12em;
-  color: var(--accent); flex: none;
+  color: var(--muted); flex: none;
 }
+.topbar__mark .jp { color: var(--tokyo); }
+.topbar__mark .kr { color: var(--seoul); }
 .topbar__title {
   font-family: var(--font-display); font-size: .95rem; letter-spacing: .02em; color: var(--ink-2);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -118,13 +130,13 @@ a { color: inherit; }
 .hero__veil {
   position: absolute; inset: 0; z-index: -1;
   background:
-    linear-gradient(180deg, rgba(12,11,15,.86) 0%, rgba(12,11,15,.44) 32%, rgba(12,11,15,.93) 88%),
-    radial-gradient(120% 80% at 15% 90%, rgba(12,11,15,.85), transparent 65%);
+    linear-gradient(180deg, rgba(0,0,0,.86) 0%, rgba(0,0,0,.44) 32%, rgba(0,0,0,.93) 88%),
+    radial-gradient(120% 80% at 15% 90%, rgba(0,0,0,.85), transparent 65%);
 }
 .hero__inner { max-width: 44rem; }
 .hero__kicker {
   margin: 0 0 1.25rem; font-size: .74rem; letter-spacing: .22em; text-transform: uppercase;
-  color: var(--accent);
+  color: var(--ink);
 }
 .hero__title {
   font-family: var(--font-display); font-weight: 400;
@@ -178,16 +190,20 @@ a { color: inherit; }
 .stats__list li { background: var(--bg); padding: 1.6rem 1.5rem; }
 .stats__list b {
   display: block; font-family: var(--font-display); font-weight: 400;
-  font-size: clamp(1.9rem, 4.5vw, 2.7rem); line-height: 1; color: var(--accent); margin-bottom: .7rem;
+  font-size: clamp(1.9rem, 4.5vw, 2.7rem); line-height: 1; color: var(--tokyo); margin-bottom: .7rem;
 }
+.stats__list li:nth-child(even) b { color: var(--seoul); }
 .stats__list span { color: var(--ink-2); font-size: .93rem; }
 
 /* ------------------------------------------------------------------- city */
 .city { padding: clamp(4.5rem, 12vh, 9rem) 0 0; }
-.city--seoul { --accent: var(--seoul); --accent-deep: var(--seoul-deep); }
+.city--seoul { --accent: var(--seoul); --accent-2: var(--seoul-2); }
 
 .city__head { position: relative; margin-bottom: clamp(3rem, 8vh, 5.5rem); }
-.city__eyebrow { font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); margin: 0 0 1rem; }
+.city__eyebrow {
+  font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--ink); margin: 0 0 1rem;
+  padding-left: .75rem; border-left: 3px solid var(--accent);
+}
 .city__name {
   font-family: var(--font-display); font-weight: 400; letter-spacing: -.03em; line-height: .9;
   font-size: clamp(3.5rem, 13vw, 9rem); margin: 0;
@@ -211,15 +227,16 @@ a { color: inherit; }
 .place__head { align-self: start; }
 @media (min-width: 900px) { .place__head { position: sticky; top: 5.5rem; } }
 .place__num {
-  font-family: var(--font-display); font-size: .9rem; color: var(--accent);
+  font-family: var(--font-display); font-size: .9rem; color: var(--ink);
   letter-spacing: .1em; display: block; margin-bottom: .8rem;
+  padding-left: .65rem; border-left: 3px solid var(--accent-2); line-height: 1.1;
 }
 .place__name {
   font-family: var(--font-display); font-weight: 400; letter-spacing: -.015em; line-height: 1.05;
   font-size: clamp(1.55rem, 3.2vw, 2.1rem); margin: 0 0 .5rem;
 }
 .place__local { display: block; font-size: .82rem; letter-spacing: .06em; color: var(--muted); margin-top: .35rem; }
-.place__sub { margin: 0 0 1rem; color: var(--accent); font-size: .93rem; font-style: italic; }
+.place__sub { margin: 0 0 1rem; color: var(--ink-2); font-size: .93rem; font-style: italic; }
 .place__meta { margin: 0; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); }
 
 .place__body { min-width: 0; }
@@ -259,7 +276,7 @@ a { color: inherit; }
 .learn > summary {
   cursor: pointer; list-style: none; padding: 1rem 1.25rem;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-  font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent);
+  font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink);
 }
 .learn > summary::-webkit-details-marker { display: none; }
 .learn > summary::after {
@@ -281,8 +298,8 @@ a { color: inherit; }
 .learn__links a::after { content: "↗"; font-size: .85em; color: var(--accent); }
 
 /* recommendation */
-.rec { display: flex; gap: 1rem; align-items: flex-start; padding-left: 1.1rem; border-left: 2px solid var(--accent); }
-.rec b { flex: none; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); padding-top: .3rem; }
+.rec { display: flex; gap: 1rem; align-items: flex-start; padding-left: 1.1rem; border-left: 3px solid var(--accent-2); }
+.rec b { flex: none; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink); padding-top: .3rem; }
 .rec p { margin: 0; font-family: var(--font-display); font-size: 1.1rem; font-style: italic; color: var(--ink); }
 @media (max-width: 620px) { .rec { flex-direction: column; gap: .5rem; } }
 
@@ -302,7 +319,10 @@ a { color: inherit; }
   font-size: clamp(1.7rem, 3.8vw, 2.6rem); margin: 0 0 2rem;
   display: flex; align-items: baseline; gap: 1rem;
 }
-.section-heading__num { font-size: .8rem; letter-spacing: .18em; color: var(--accent); font-family: var(--font-body); }
+.section-heading__num {
+  font-size: .8rem; letter-spacing: .18em; color: var(--ink); font-family: var(--font-body);
+  padding-left: .6rem; border-left: 3px solid var(--accent);
+}
 .travel__grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .travel__grid figure { margin: 0; }
 .travel__grid img { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; border: 1px solid var(--line-soft); cursor: zoom-in; }
@@ -320,8 +340,9 @@ a { color: inherit; }
 }
 .chips button:hover { color: var(--ink); border-color: var(--muted); }
 .chips button.is-on { background: var(--ink); color: var(--bg); border-color: var(--ink); font-weight: 600; }
-.chips .chip--tokyo.is-on { background: var(--tokyo); border-color: var(--tokyo); color: #1a0b08; }
-.chips .chip--seoul.is-on { background: var(--seoul); border-color: var(--seoul); color: #042016; }
+/* white on the flag colors: 6.6:1 (Japan red) and 5.6:1 (Korea blue) */
+.chips .chip--tokyo.is-on { background: var(--tokyo); border-color: var(--tokyo); color: var(--white); }
+.chips .chip--seoul.is-on { background: var(--seoul); border-color: var(--seoul); color: var(--white); }
 
 .gallery__grid { columns: 4 230px; column-gap: 12px; }
 .gallery__grid figure { break-inside: avoid; margin: 0 0 12px; }
@@ -342,13 +363,13 @@ a { color: inherit; }
 .foot__by { color: var(--ink-2) !important; }
 .foot__by span { color: var(--ink); font-weight: 600; }
 .foot__contact { margin: .3rem 0 1.1rem !important; }
-.foot__contact a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
-.foot__contact a:hover { border-bottom-color: var(--accent); }
+.foot__contact a { color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--accent); }
+.foot__contact a:hover { border-bottom-color: var(--ink); }
 .foot__note { color: var(--faint) !important; font-size: .82rem !important; line-height: 1.7; }
 
 /* --------------------------------------------------------------- lightbox */
 .lightbox {
-  position: fixed; inset: 0; z-index: 120; background: rgba(8,7,10,.96);
+  position: fixed; inset: 0; z-index: 120; background: rgba(0,0,0,.96);
   display: grid; place-items: center; padding: clamp(1rem, 4vw, 3rem);
   backdrop-filter: blur(6px);
 }
@@ -396,5 +417,5 @@ body.lb-open { overflow: hidden; }
 
 @media print {
   .topbar, .progress, .hero__cue, .chips, .lightbox { display: none !important; }
-  body { background: #fff; color: #000; }
+  body { background: #FFFFFF; color: #000000; }
 }
