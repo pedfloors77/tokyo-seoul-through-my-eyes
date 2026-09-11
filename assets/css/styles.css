@@ -14,20 +14,23 @@
   --kr-red:  #CD2E3A;  /* taegeuk, upper half */
   --kr-blue: #0F64CD;  /* taegeuk, lower half */
 
-  --bg:        var(--black);
-  --bg-2:      rgba(255, 255, 255, .04);
-  --surface:   rgba(255, 255, 255, .06);
-  --line:      rgba(255, 255, 255, .22);
-  --line-soft: rgba(255, 255, 255, .12);
+  color-scheme: light;
 
-  --ink:       var(--white);
-  --ink-2:     rgba(255, 255, 255, .82);
-  --muted:     rgba(255, 255, 255, .64);
-  --faint:     rgba(255, 255, 255, .5);
+  --bg:        var(--white);
+  --bg-2:      rgba(0, 0, 0, .035);
+  --surface:   rgba(0, 0, 0, .05);
+  --line:      rgba(0, 0, 0, .22);
+  --line-soft: rgba(0, 0, 0, .1);
 
-  /* Tokyo is one red; Seoul is blue and red. The three flag colors measure
-     3.2-4.1:1 on black - enough for large type, rules, fills and shapes
-     (3:1), not for small text (4.5:1). So small labels stay white. */
+  --ink:       var(--black);
+  --ink-2:     rgba(0, 0, 0, .84);
+  --muted:     rgba(0, 0, 0, .68);
+  --faint:     rgba(0, 0, 0, .58);  /* the floor: any lighter fails 4.5:1 on white */
+
+  /* Tokyo is one red; Seoul is blue and red. On white all three flag colors
+     pass 4.5:1 (5.2-6.6), so they carry text as well as rules and fills.
+     Inside the dark islands below they drop to 3.2-4.1:1, so there they
+     only appear at large sizes. */
   --tokyo:    var(--jp-red);
   --seoul:    var(--kr-blue);
   --seoul-2:  var(--kr-red);
@@ -40,6 +43,23 @@
   --wrap: 1180px;
   --gap: clamp(1rem, 2.5vw, 2rem);
   --radius: 3px;
+}
+
+/* Dark islands: the hero, the top bar while it sits over the hero, the
+   lightbox and the footer keep a black ground. They redefine the tokens, so
+   every rule inside them works unchanged. */
+.hero, .topbar:not(.is-stuck), .lightbox, .foot {
+  color-scheme: dark;
+  --bg:        var(--black);
+  --bg-2:      rgba(255, 255, 255, .04);
+  --surface:   rgba(255, 255, 255, .06);
+  --line:      rgba(255, 255, 255, .22);
+  --line-soft: rgba(255, 255, 255, .12);
+  --ink:       var(--white);
+  --ink-2:     rgba(255, 255, 255, .82);
+  --muted:     rgba(255, 255, 255, .64);
+  --faint:     rgba(255, 255, 255, .5);
+  color: var(--ink);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -91,7 +111,7 @@ a { color: inherit; }
   transition: background .35s ease, border-color .35s ease, backdrop-filter .35s ease;
 }
 .topbar.is-stuck {
-  background: rgba(0, 0, 0, .86);
+  background: rgba(255, 255, 255, .92);
   backdrop-filter: blur(14px);
   border-bottom-color: var(--line-soft);
 }
@@ -119,7 +139,7 @@ a { color: inherit; }
 .hero {
   position: relative; min-height: 100svh; display: flex; align-items: flex-end;
   padding: 7rem clamp(1.25rem, 4vw, 4rem) clamp(2rem, 6vh, 4.5rem);
-  overflow: hidden; isolation: isolate;
+  overflow: hidden; isolation: isolate; background: var(--black);
 }
 .hero__stage { position: absolute; inset: 0; z-index: -2; background: var(--bg-2); }
 .hero__stage img {
@@ -201,23 +221,32 @@ a { color: inherit; }
 
 .city__head { position: relative; margin-bottom: clamp(3rem, 8vh, 5.5rem); }
 .city__eyebrow {
-  font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--ink); margin: 0 0 1rem;
+  font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); margin: 0 0 1rem;
   padding-left: .75rem; border-left: 3px solid var(--accent);
 }
 .city__name {
   font-family: var(--font-display); font-weight: 400; letter-spacing: -.03em; line-height: .9;
   font-size: clamp(3.5rem, 13vw, 9rem); margin: 0;
 }
-.city__name span { color: var(--muted); font-size: .3em; letter-spacing: .06em; vertical-align: super; margin-left: .5em; }
 .city__intro { max-width: 38rem; margin: 1.75rem 0 0; color: var(--ink-2); font-size: 1.05rem; }
 
-/* GPS scatter */
-.plot { margin-top: 2.5rem; border: 1px solid var(--line-soft); padding: 1.25rem; background: var(--bg-2); }
-.plot__label { font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: var(--faint); margin: 0 0 .9rem; }
-.plot svg { width: 100%; height: auto; display: block; overflow: visible; }
-.plot circle { fill: var(--accent); fill-opacity: .5; stroke: var(--accent); stroke-width: .8; cursor: pointer; transition: fill-opacity .2s, r .2s; }
-.plot circle:hover, .plot circle:focus { fill-opacity: 1; }
-.plot__tip { font-size: .8rem; color: var(--ink-2); margin: .9rem 0 0; min-height: 1.4em; }
+/* The city's name in its own script. System CJK faces only, so the site
+   still makes no external requests: Hiragino or Yu Gothic for Japanese,
+   Apple SD Gothic Neo or Malgun Gothic for Korean. */
+.city__glyph {
+  margin: clamp(2rem, 6vh, 4rem) 0 0;
+  font-weight: 700; line-height: .95; letter-spacing: -.02em;
+  font-size: clamp(7rem, 34vw, 26rem);
+  color: var(--accent);
+}
+.city__glyph:lang(ja) {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", YuGothic,
+               "Noto Sans JP", "Noto Sans CJK JP", Meiryo, "MS Gothic", sans-serif;
+}
+.city__glyph:lang(ko) {
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Noto Sans CJK KR",
+               "Nanum Gothic", sans-serif;
+}
 
 /* ------------------------------------------------------------------ place */
 .place { padding: clamp(3rem, 8vh, 6rem) 0; border-top: 1px solid var(--line-soft); }
@@ -227,7 +256,7 @@ a { color: inherit; }
 .place__head { align-self: start; }
 @media (min-width: 900px) { .place__head { position: sticky; top: 5.5rem; } }
 .place__num {
-  font-family: var(--font-display); font-size: .9rem; color: var(--ink);
+  font-family: var(--font-display); font-size: .9rem; color: var(--accent-2);
   letter-spacing: .1em; display: block; margin-bottom: .8rem;
   padding-left: .65rem; border-left: 3px solid var(--accent-2); line-height: 1.1;
 }
@@ -236,7 +265,7 @@ a { color: inherit; }
   font-size: clamp(1.55rem, 3.2vw, 2.1rem); margin: 0 0 .5rem;
 }
 .place__local { display: block; font-size: .82rem; letter-spacing: .06em; color: var(--muted); margin-top: .35rem; }
-.place__sub { margin: 0 0 1rem; color: var(--ink-2); font-size: .93rem; font-style: italic; }
+.place__sub { margin: 0 0 1rem; color: var(--accent); font-size: .93rem; font-style: italic; }
 .place__meta { margin: 0; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); }
 
 .place__body { min-width: 0; }
@@ -276,7 +305,7 @@ a { color: inherit; }
 .learn > summary {
   cursor: pointer; list-style: none; padding: 1rem 1.25rem;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-  font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink);
+  font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent);
 }
 .learn > summary::-webkit-details-marker { display: none; }
 .learn > summary::after {
@@ -299,12 +328,12 @@ a { color: inherit; }
 
 /* recommendation */
 .rec { display: flex; gap: 1rem; align-items: flex-start; padding-left: 1.1rem; border-left: 3px solid var(--accent-2); }
-.rec b { flex: none; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink); padding-top: .3rem; }
+.rec b { flex: none; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent-2); padding-top: .3rem; }
 .rec p { margin: 0; font-family: var(--font-display); font-size: 1.1rem; font-style: italic; color: var(--ink); }
 @media (max-width: 620px) { .rec { flex-direction: column; gap: .5rem; } }
 
 /* aside */
-.aside { border: 1px dashed var(--line); padding: 1.5rem; background: rgba(255,255,255,.015); }
+.aside { border: 1px dashed var(--line); padding: 1.5rem; background: var(--bg-2); }
 .aside__title { font-family: var(--font-display); font-size: 1.15rem; margin: 0 0 .25rem; }
 .aside__local { font-size: .8rem; color: var(--muted); margin: 0 0 1rem; }
 .aside p.aside__words { margin: 0 0 1.15rem; color: var(--ink-2); }
@@ -320,7 +349,7 @@ a { color: inherit; }
   display: flex; align-items: baseline; gap: 1rem;
 }
 .section-heading__num {
-  font-size: .8rem; letter-spacing: .18em; color: var(--ink); font-family: var(--font-body);
+  font-size: .8rem; letter-spacing: .18em; color: var(--accent); font-family: var(--font-body);
   padding-left: .6rem; border-left: 3px solid var(--accent);
 }
 .travel__grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
@@ -355,7 +384,7 @@ a { color: inherit; }
 .gallery__empty { color: var(--muted); }
 
 /* ------------------------------------------------------------------- foot */
-.foot { border-top: 1px solid var(--line); padding: clamp(3rem, 7vh, 4.5rem) 0; }
+.foot { background: var(--bg); padding: clamp(3rem, 7vh, 4.5rem) 0; }
 .foot__inner { display: grid; gap: 2rem; grid-template-columns: 1fr; }
 @media (min-width: 800px) { .foot__inner { grid-template-columns: 1fr 1.2fr; gap: 4rem; } }
 .foot__title { font-family: var(--font-display); font-size: 1.3rem; margin: 0 0 .5rem; }

@@ -196,40 +196,17 @@
     }).join('') + '</dl>';
   }
 
-  /* ------------------------------------------------------------------ plot */
-  function plotHtml(city) {
-    var pts = [];
-    city.places.forEach(function (pl) {
-      photosFor(pl.id).forEach(function (ph) {
-        if (ph.gps) pts.push({ lat: ph.gps[0], lon: ph.gps[1], place: pl.name, id: pl.id });
-      });
-    });
-    if (pts.length < 3) return '';
+  /* ------------------------------------------------------------ city glyph */
+  /* The city's name in its own script, set very large. The lang attribute
+     matters: it makes the browser pick Japanese glyph shapes for 東京 and a
+     Korean font for 서울. */
+  var CITY_LANG = { tokyo: 'ja', seoul: 'ko' };
 
-    var lats = pts.map(function (p) { return p.lat; });
-    var lons = pts.map(function (p) { return p.lon; });
-    var minLat = Math.min.apply(null, lats), maxLat = Math.max.apply(null, lats);
-    var minLon = Math.min.apply(null, lons), maxLon = Math.max.apply(null, lons);
-    var padLat = (maxLat - minLat) * 0.12 || 0.01;
-    var padLon = (maxLon - minLon) * 0.12 || 0.01;
-    minLat -= padLat; maxLat += padLat; minLon -= padLon; maxLon += padLon;
-
-    var W = 1000, H = 420;
-    var circles = pts.map(function (p) {
-      var x = ((p.lon - minLon) / (maxLon - minLon)) * W;
-      var y = H - ((p.lat - minLat) / (maxLat - minLat)) * H;
-      return '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="7" ' +
-             'tabindex="0" role="button" data-goto="' + esc(p.id) + '" ' +
-             'data-name="' + esc(p.place) + '"><title>' + esc(p.place) + '</title></circle>';
-    }).join('');
-
-    return '<div class="plot">' +
-      '<p class="plot__label">Where I was &mdash; every geotagged photograph in ' + esc(city.name) + '</p>' +
-      '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" ' +
-        'aria-label="Scatter plot of ' + pts.length + ' photograph locations across ' + esc(city.name) + '">' +
-        circles + '</svg>' +
-      '<p class="plot__tip">Hover or focus a point to name the place; select it to jump there.</p>' +
-      '</div>';
+  function glyphHtml(city) {
+    if (!city.nameLocal) return '';
+    var lang = CITY_LANG[city.id];
+    return '<p class="city__glyph"' + (lang ? ' lang="' + lang + '"' : '') + '>' +
+           esc(city.nameLocal) + '</p>';
   }
 
   /* ---------------------------------------------------------------- cities */
@@ -244,10 +221,9 @@
     var head =
       '<div class="wrap city__head reveal">' +
         '<p class="city__eyebrow">' + String(ci + 1).padStart(2, '0') + ' &mdash; ' + esc(city.dates || '') + '</p>' +
-        '<h2 class="city__name">' + esc(city.name) +
-          (city.nameLocal ? '<span>' + esc(city.nameLocal) + '</span>' : '') + '</h2>' +
+        '<h2 class="city__name">' + esc(city.name) + '</h2>' +
         (city.intro ? '<p class="city__intro">' + esc(city.intro) + '</p>' : '') +
-        plotHtml(city) +
+        glyphHtml(city) +
       '</div>';
 
     var body = (city.places || []).map(function (place, pi) {
@@ -445,32 +421,6 @@
       }
     });
   }());
-
-  /* ------------------------------------------------------- plot interaction */
-  document.addEventListener('mouseover', function (e) {
-    var c = e.target.closest('circle[data-goto]');
-    if (!c) return;
-    var tip = c.closest('.plot').querySelector('.plot__tip');
-    tip.textContent = c.dataset.name;
-  });
-  document.addEventListener('focusin', function (e) {
-    var c = e.target.closest && e.target.closest('circle[data-goto]');
-    if (!c) return;
-    c.closest('.plot').querySelector('.plot__tip').textContent = c.dataset.name;
-  });
-  function gotoPlace(c) {
-    var target = document.getElementById('place-' + c.dataset.goto);
-    if (target) target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
-  }
-  document.addEventListener('click', function (e) {
-    var c = e.target.closest('circle[data-goto]');
-    if (c) gotoPlace(c);
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key !== 'Enter' && e.key !== ' ') return;
-    var c = e.target.closest && e.target.closest('circle[data-goto]');
-    if (c) { e.preventDefault(); gotoPlace(c); }
-  });
 
   /* ---------------------------------------------------- scroll: bar, topbar */
   (function scrollUi() {

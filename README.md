@@ -62,9 +62,11 @@ Each place in `places.json` carries:
 
 ## What the page does
 
+- Five colors only, from the two flags: `#000000` `#FFFFFF` `#BC002D` `#CD2E3A` `#0F64CD`.
+  White page; the hero, lightbox and footer are black. Greys are black or white at partial opacity.
 - Hero cross-fades five photographs; the program poster sits in the corner.
-- Each city opens with **Where I was** — an SVG scatter of every geotagged photograph in that
-  city, plotted from real EXIF coordinates. Hover to name the place, click to jump to it.
+- Each city opens with its name in its own script, set very large: 東京 in Japan red, 서울 in
+  Korea blue. System fonts only (Hiragino / Yu Gothic, Apple SD Gothic Neo / Malgun Gothic).
 - Place sections have a sticky title column on wide screens.
 - **Learn more** panels are collapsed by default so the page reads as a story first.
 - Photo gallery: all 83, 26 filter chips (all / city / place), lazy-loaded thumbnails.
